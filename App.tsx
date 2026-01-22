@@ -632,7 +632,7 @@ async function loadAdminUsers(): Promise<void> {
     }
   }
 
-  const headerTitle = sessionEmail ? screenTitle(screen) : "Вход / Регистрация";
+  const headerTitle = sessionEmail ? screenTitle(screen) : "Добро пожаловать!";
   const isSubScreen = sessionEmail && (screen === "account" || screen === "editProfile" || screen === "adminUsers");
   const showGear = sessionEmail && !isSubScreen;
   const showBack = Boolean(isSubScreen);
@@ -795,10 +795,7 @@ async function loadAdminUsers(): Promise<void> {
               </Pressable>
             </View>
 
-            <Text style={styles.disclaimer}>
-              Аккаунт и история сохраняются в базе данных PostgreSQL через локальный
-              backend API. Для тестирования используйте простой пароль.
-            </Text>
+            
           </View>
         </KeyboardAvoidingView>
       );
